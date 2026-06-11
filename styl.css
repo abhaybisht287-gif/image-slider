@@ -1,0 +1,354 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#050816;
+}
+
+/* Anime Header */
+.anime-header{
+    position:relative;
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.75)),
+    url("https://wallpapercave.com/wp/wp5128415.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    overflow:hidden;
+    padding:40px;
+}
+
+/* Floating Anime Glow */
+.anime-header::before{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:#ff006e;
+    border-radius:50%;
+    filter:blur(180px);
+    top:-100px;
+    left:-100px;
+    opacity:.4;
+    animation:float 6s infinite alternate;
+}
+
+.anime-header::after{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:#3a86ff;
+    border-radius:50%;
+    filter:blur(180px);
+    bottom:-100px;
+    right:-100px;
+    opacity:.4;
+    animation:float 6s infinite alternate-reverse;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0px);
+    }
+    to{
+        transform:translateY(50px);
+    }
+}
+
+/* Main Title */
+.anime-header h1{
+    color:white;
+    font-size:90px;
+    font-weight:900;
+    letter-spacing:8px;
+    z-index:2;
+
+    text-shadow:
+    0 0 10px #ff006e,
+    0 0 20px #ff006e,
+    0 0 40px #8338ec,
+    0 0 80px #3a86ff;
+
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(1.04);
+    }
+}
+
+/* Paragraph */
+.anime-header p{
+    max-width:900px;
+    color:#e2e8f0;
+    font-size:22px;
+    line-height:2;
+    margin-top:25px;
+    z-index:2;
+}
+
+/* Anime Button */
+.anime-btn{
+    margin-top:40px;
+    padding:15px 45px;
+    font-size:20px;
+    font-weight:700;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+
+    background:linear-gradient(
+    45deg,
+    #ff006e,
+    #8338ec,
+    #3a86ff);
+
+    color:white;
+
+    transition:.4s;
+    z-index:2;
+}
+
+.anime-btn:hover{
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:
+    0 0 20px #ff006e,
+    0 0 40px #8338ec,
+    0 0 60px #3a86ff;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .anime-header h1{
+        font-size:45px;
+        letter-spacing:3px;
+    }
+
+    .anime-header p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .anime-btn{
+        font-size:16px;
+        padding:12px 30px;
+    }
+}
+body{
+    background-color: rgb(5, 5, 7);
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(
+        135deg,
+        #050816,
+        #0f172a,
+        #1e1b4b,
+        #050816
+    );
+
+    background-attachment:fixed;
+    color:white;
+    min-height:100vh;
+}
+
+/* Website Title */
+.class{
+    text-align:center;
+    font-size:60px;
+    font-weight:900;
+    padding:30px;
+
+    background:linear-gradient(
+        90deg,
+        #ff006e,
+        #8338ec,
+        #3a86ff
+    );
+
+    color:white;
+
+    text-shadow:
+    0 0 10px #fff,
+    0 0 20px #ff006e,
+    0 0 40px #8338ec;
+
+    letter-spacing:5px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.5);
+}
+
+/* Anime Sections */
+.conternar,
+.conternar2,
+.conternar3{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    padding:40px;
+}
+
+/* Anime Cards */
+.conternar img,
+.conternar2 img,
+.conternar3 img{
+
+    width:100%;
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    transition:.5s;
+
+    border:3px solid rgba(255,255,255,.1);
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.4);
+}
+
+/* Hover Effect */
+.conternar img:hover,
+.conternar2 img:hover,
+.conternar3 img:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.05);
+
+    border-color:#ff006e;
+
+    box-shadow:
+    0 0 20px #ff006e,
+    0 0 40px #8338ec,
+    0 0 60px #3a86ff;
+}
+
+/* Section Headings */
+.conternar::before{
+    content:"🔥 Popular Anime";
+}
+
+.conternar2::before{
+    content:"🎬 Anime Movies";
+}
+
+.conternar3::before{
+    content:"⚔️ Fantasy & Isekai";
+}
+
+.conternar::before,
+.conternar2::before,
+.conternar3::before{
+
+    grid-column:1/-1;
+
+    font-size:35px;
+    font-weight:800;
+
+    color:white;
+
+    margin-bottom:10px;
+
+    text-shadow:
+    0 0 10px #ff006e,
+    0 0 20px #8338ec;
+}
+
+/* Smooth Animation */
+.conternar img,
+.conternar2 img,
+.conternar3 img{
+    animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar{
+    width:12px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111827;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(
+        #ff006e,
+        #8338ec,
+        #3a86ff
+    );
+
+    border-radius:20px;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:30px;
+    margin-top:30px;
+
+    background:#020617;
+
+    border-top:2px solid #8338ec;
+
+    color:#d1d5db;
+}
+
+footer h2{
+    color:#ff006e;
+    margin-bottom:10px;
+}
+
